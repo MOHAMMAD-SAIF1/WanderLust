@@ -6,10 +6,17 @@ const Review = require("./review.js");
 const listingSchema = new mongoose.Schema({
     title: String,
     description: String,
-    image: {
-    type: String,
-    default: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
-    set: value => value === "" ? "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" : value
+   image: {
+  type: String,
+  default: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+  set: (v) => {
+    if (v && typeof v === 'object' && v.url) {
+      return v.url;
+    } 
+    return v === "" 
+      ? "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+      : v;
+  },
 },
 
     price: Number,
@@ -21,11 +28,15 @@ const listingSchema = new mongoose.Schema({
             ref: "Review",
         },
     ],
+     owner: {
+         type: Schema.Types.ObjectId,
+         ref: "user",
+     },
 });
 
-listingSchema.post("findOneAndDelete", async (Listing)=>{
+listingSchema.post("findOneAndDelete", async (listing)=>{
     if(listing){
-    await Review.deleteMany({_id : {$in : listingSchema.reviews}});
+    await Review.deleteMany({ _id : {$in : listing.reviews}});
     }
 });
 

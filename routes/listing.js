@@ -7,7 +7,7 @@ const Listing = require("../models/listing.js");
 const {isLoggedIn, isOwner, validateListing } = require("../middleware.js");
 const listingController = require("../controllers/listings.js");
 const multer = require('multer');
-const upload = multer({ dest : 'uploads/'})
+const upload = multer({ dest : 'uploads'})
 
 router.route("/")
  .get(wrapAsync (listingController.index))

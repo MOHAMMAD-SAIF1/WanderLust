@@ -45,42 +45,6 @@ This project is built as a real-world full-stack application showcasing backend 
 - RESTful routing conventions
 
 
-## 🏗️ Project Structure (MVC)
-Wanderlust/
-│
-├── models/ # Mongoose schemas
-│ ├── listing.js
-│ ├── review.js
-│ └── user.js
-│
-├── controllers/ # Route logic
-│ ├── listings.js
-│ ├── reviews.js
-│ └── users.js
-│
-├── routes/ # Express routes
-│ ├── listing.js
-│ ├── review.js
-│ └── user.js
-│
-├── views/ # EJS templates
-│ ├── layouts/
-│ ├── listings/
-│ ├── users/
-│ └── includes/
-│
-├── public/ # Static assets
-│ ├── css/
-│ └── js/
-│
-├── middleware.js # Authentication & authorization middleware
-├── utils/
-│ └── wrapAsync.js
-│
-├── app.js # Main application file
-├── package.json
-└── README.md
-
 ##  How to Run the Website Locally
 
 Follow the steps below to run the Wanderlust website on your local machine.

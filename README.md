@@ -74,7 +74,7 @@ cd wanderlust
 ### 4 Install Project Dependencies
 
 ```bash
-Install Project Dependencies
+npm install
 ```
 
 ### 5 Configure Environment Variables

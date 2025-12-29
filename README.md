@@ -65,49 +65,47 @@ Make sure the following are installed on your system:
 ```bash
 git clone https://github.com/MOHAMMAD-SAIF1/wanderlust.git
 
-3️ Navigate to the Project Directory
+```
+### 3 Navigate to the Project Directory
+
+```bash
 cd wanderlust
+```
+### 4 Install Project Dependencies
 
-4️ Install Project Dependencies
-npm install
+```bash
+Install Project Dependencies
+```
 
-5️ Configure Environment Variables
+### 5 Configure Environment Variables
 
 Create a .env file in the root directory and add the following:
-
-DB_URL=yourDB_URLkey
+```bash
+DB_URL=your DB_URL Key.
 SESSION_SECRET=yourSecretKey
-
-Replace values if using a cloud database.
-
-6️ Start MongoDB
+```
+### 6 Start MongoDB
 
 If using local MongoDB:
-
+```bash
 mongod
-
-
-Or ensure MongoDB Atlas is connected properly.
-
-7️ Run the Application
+```
+### 7 Run the Application
 
 Using Nodemon (recommended):
-
+```bash
 nodemon app.js
-
-
-Or using Node:
-
+```
+or 
+```bash
 node app.js
-
-8️ Open in Browser
+```
+### 8 Open in Browser
 
 Visit the following URL in your browser:
-
+```bash
 http://localhost:4000
-
-9️ Stop the Server
+```
+### 9 Stop the Server
 
 Press Ctrl + C in the terminal to stop the server.
-
-
